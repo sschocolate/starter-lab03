@@ -7,18 +7,18 @@
  */
 
 /**
- * Description of First
+ * Description of Last
  *
  * @author a00894773
  */
-class First extends Application{
+class Welcome extends Application{
     function __construct() {
         parent::__construct();
     }
     function index() {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
         // build the list of authors, to pass on to our view
-        $source = $this->quotes->first();
+        $source = $this->quotes->last();
         
         $this->data['mug'] = $source['mug'];
         $this->data['what'] = $source['what'];
