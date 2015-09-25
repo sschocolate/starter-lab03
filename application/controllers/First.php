@@ -17,9 +17,9 @@ class First extends Application{
     }
     function index() {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
-        // build the list of authors, to pass on to our view
+        // Calls the first method inquotes.php to get an entry
         $source = $this->quotes->first();
-        
+        // Associate it with the view
         $this->data['mug'] = $source['mug'];
         $this->data['what'] = $source['what'];
         $this->data['who'] = $source['who'];
@@ -28,9 +28,9 @@ class First extends Application{
     }
     function zzz() {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
-        // build the list of authors, to pass on to our view
+        // Get thje first entry
         $source = $this->quotes->get('1');
-        
+        // Associate it with the view
         $this->data['mug'] = $source['mug'];
         $this->data['what'] = $source['what'];
         $this->data['who'] = $source['who'];
