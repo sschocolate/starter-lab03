@@ -42,6 +42,7 @@ $route['lock/(.*)'] = "welcome/shucks";//route to shucks function in welcome.php
 $route['show/:num'] = "first/gimme/3";//route to gimme method, passing in 3 as a parameter
 $route['dunno'] = "guess";//route to the 'guess' controller
 $route['[a-z]{4}/bingo'] = "bingo";//route to the 'bingo' controller
+$route['comp(:num)/(.*)'] = "bingo/wisdom";//route to the wisdom method in bingo.php
 
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
