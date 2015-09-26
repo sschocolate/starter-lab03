@@ -20,9 +20,7 @@ class First extends Application{
         // Calls the first method inquotes.php to get an entry
         $source = $this->quotes->first();
         // Associate it with the view
-        $this->data['mug'] = $source['mug'];
-        $this->data['what'] = $source['what'];
-        $this->data['who'] = $source['who'];
+        $this->data = array_merge($this->data, $source);
         
         $this->render();
     }
@@ -31,9 +29,7 @@ class First extends Application{
         // Get the first entry
         $source = $this->quotes->get('1');
         // Associate it with the view
-        $this->data['mug'] = $source['mug'];
-        $this->data['what'] = $source['what'];
-        $this->data['who'] = $source['who'];
+        $this->data = array_merge($this->data, $source);
         
         $this->render();
     }
@@ -42,9 +38,7 @@ class First extends Application{
         // Get the entry with $value
         $source = $this->quotes->get($value);
         // Associate it with the view
-        $this->data['mug'] = $source['mug'];
-        $this->data['what'] = $source['what'];
-        $this->data['who'] = $source['who'];
+        $this->data = array_merge($this->data, $source);
         
         $this->render();
     }

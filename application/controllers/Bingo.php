@@ -21,9 +21,7 @@ class Bingo extends Application {
         // Get the fifth entry from quotes.php
         $source = $this->quotes->get('5');
         // Associate it with the view
-        $this->data['mug'] = $source['mug'];
-        $this->data['what'] = $source['what'];
-        $this->data['who'] = $source['who'];
+        $this->data = array_merge($this->data, $source);
         
         $this->render();
     }
@@ -32,9 +30,7 @@ class Bingo extends Application {
         // Get the last entry from quotes.php
         $source = $this->quotes->last();
         // Associate it with the view
-        $this->data['mug'] = $source['mug'];
-        $this->data['what'] = $source['what'];
-        $this->data['who'] = $source['who'];
+        $this->data = array_merge($this->data, $source);
         
         $this->render();
     }

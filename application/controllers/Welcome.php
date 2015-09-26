@@ -35,9 +35,7 @@ class Welcome extends Application {
         // Gets the second entry
         $source = $this->quotes->get('2');
         // Associate it with the view
-        $this->data['mug'] = $source['mug'];
-        $this->data['what'] = $source['what'];
-        $this->data['who'] = $source['who'];
+        $this->data = array_merge($this->data, $source);
 
         $this->render();
     }
