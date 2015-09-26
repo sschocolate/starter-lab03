@@ -40,6 +40,7 @@
 $route['sleep'] = "first/zzz";//route to zzz function in First.php
 $route['lock/(.*)'] = "welcome/shucks";//route to shucks function in welcome.php
 $route['show/:num'] = "first/gimme/3";//route to gimme method, passing in 3 as a parameter
+$route['dunno'] = "guess";//route to the 'guess' controller
 
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
