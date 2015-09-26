@@ -28,8 +28,19 @@ class First extends Application{
     }
     function zzz() {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
-        // Get thje first entry
+        // Get the first entry
         $source = $this->quotes->get('1');
+        // Associate it with the view
+        $this->data['mug'] = $source['mug'];
+        $this->data['what'] = $source['what'];
+        $this->data['who'] = $source['who'];
+        
+        $this->render();
+    }
+    function gimme($value) {
+        $this->data['pagebody'] = 'justone';    // this is the view we want shown
+        // Get the entry with $value
+        $source = $this->quotes->get($value);
         // Associate it with the view
         $this->data['mug'] = $source['mug'];
         $this->data['what'] = $source['what'];

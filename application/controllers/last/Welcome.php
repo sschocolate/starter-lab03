@@ -17,9 +17,9 @@ class Welcome extends Application{
     }
     function index() {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
-        // build the list of authors, to pass on to our view
+        // Calls the last function in quotes to get the last entry
         $source = $this->quotes->last();
-        
+        // Associates the data with the view
         $this->data['mug'] = $source['mug'];
         $this->data['what'] = $source['what'];
         $this->data['who'] = $source['who'];
