@@ -9,8 +9,12 @@
 |	http://codeigniter.com/user_guide/general/hooks.html
 |
 */
-
-
+//Create a hook with filepath, filename, and function name
+$hook['display_override'] = array(
+                                'function' => 'upperCase',
+                                'filename' => 'Capitalize.php',
+                                'filepath' => 'hooks'
+                                );
 
 /* End of file hooks.php */
 /* Location: ./application/config/hooks.php */
